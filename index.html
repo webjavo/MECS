@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miracle Elite Cleaning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#071a2f;
+color:white;
+overflow-x:hidden;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#071a2f;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+flex-direction:column;
+}
+
+.loader-ring{
+width:90px;
+height:90px;
+border-radius:50%;
+border:6px solid rgba(255,255,255,0.08);
+border-top:6px solid #00eaff;
+animation:spin 1s linear infinite;
+box-shadow:0 0 25px #00eaff;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+.loader-text{
+margin-top:20px;
+opacity:.8;
+letter-spacing:2px;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:60px 10%;
+position:relative;
+background:
+linear-gradient(135deg,#071a2f 40%,#0f2f5a);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+/* TITLE */
+
+.title{
+font-size:40px;
+font-weight:700;
+line-height:1.2;
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.title img{
+width:32px;
+height:32px;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:18px;
+opacity:.9;
+max-width:480px;
+}
+
+/* ACTIVE BUTTON */
+
+.active7{
+margin-top:25px;
+display:inline-block;
+background:#d6a84c;
+color:#0b1f38;
+padding:10px 22px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 0 15px #d6a84c;
+transition:.3s;
+text-decoration:none;
+}
+
+.active7:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #d6a84c;
+}
+
+/* SERVICES */
+
+.services{
+margin-top:40px;
+display:grid;
+gap:12px;
+opacity:.95;
+}
+
+.services div{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* HERO IMAGES */
+
+.hero-images{
+position:relative;
+}
+
+.hero-images img{
+width:100%;
+border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+
+.image2{
+margin-top:25px;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0px);}
+}
+
+.hero-images img{
+animation:float 6s ease-in-out infinite;
+}
+
+/* BOOK BUTTON */
+
+.book{
+position:fixed;
+right:30px;
+bottom:30px;
+background:linear-gradient(45deg,#00eaff,#00ffa6);
+color:#003;
+font-weight:700;
+padding:16px 28px;
+border-radius:40px;
+text-decoration:none;
+box-shadow:0 0 20px #00eaff,0 0 40px #00eaff;
+animation:dance 2s infinite;
+z-index:999;
+}
+
+@keyframes dance{
+0%{transform:translateY(0);}
+25%{transform:translateY(-8px) rotate(-1deg);}
+50%{transform:translateY(0);}
+75%{transform:translateY(-8px) rotate(1deg);}
+100%{transform:translateY(0);}
+}
+
+/* FACEBOOK */
+
+.facebook{
+position:fixed;
+left:30px;
+bottom:30px;
+background:#1877f2;
+padding:14px 24px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 15px rgba(24,119,242,.8);
+}
+
+/* GALLERY */
+
+.gallery{
+padding:100px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+background:#081f3a;
+}
+
+.gallery img{
+width:100%;
+border-radius:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.4);
+transition:.4s;
+animation:float 7s ease-in-out infinite;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.title{
+font-size:36px;
+}
+
+.book{
+right:15px;
+bottom:15px;
+}
+
+.facebook{
+left:15px;
+bottom:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+<div class="loader-ring"></div>
+<div class="loader-text">Loading Miracle Elite Cleaning</div>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="title">
+MIRACLE ELITE CLEANING
+<img src="icon.png">
+</div>
+
+<div class="subtitle">
+Say goodbye to dirt and grime with our expert cleaning solutions
+</div>
+
+<a class="active7"
+href="https://wa.me/2348163780960?text=I%20want%20to%20book%20for%20your%20cleaning%20service">
+Active 7
+</a>
+
+<div class="services">
+
+<div>✔ Home cleaning</div>
+<div>✔ Furniture cleaning</div>
+<div>✔ Window cleaning</div>
+<div>✔ Carpet cleaning</div>
+<div>✔ Commercial cleaning</div>
+<div>✔ Residential cleaning</div>
+<div>✔ Office cleaning</div>
+
+</div>
+
+</div>
+
+<div class="hero-images">
+
+<img src="image.jpg">
+<img class="image2" src="image1.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<img src="image.jpg">
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+<img src="image4.jpg">
+<img src="image5.jpg">
+<img src="image6.jpg">
+<img src="image7.jpg">
+<img src="image8.jpg">
+<img src="image9.jpg">
+<img src="image10.jpg">
+<img src="image11.jpg">
+<img src="image12.jpg">
+<img src="image13.jpg">
+<img src="image14.jpg">
+<img src="image15.jpg">
+
+</section>
+
+<!-- BUTTONS -->
+
+<a class="book"
+href="https://wa.me/2348063754898?text=Hello%20I%20want%20to%20book%20Miracle%20Elite%20Cleaning">
+BOOK NOW
+</a>
+
+<a class="facebook"
+href="https://www.facebook.com/share/1BwrgsEjPW/"
+target="_blank">
+Facebook
+</a>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},600);
+},2000);
+
+});
+
+</script>
+
+</body>
+</html>
